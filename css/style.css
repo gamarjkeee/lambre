@@ -355,6 +355,10 @@ h6 {
 }
 
 @media (max-width: 47.99875em) {
+  .header {
+    padding-bottom: 1.25rem;
+  }
+
   .header__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
