@@ -1165,8 +1165,8 @@ button.swiper-pagination-bullet {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: all 3s ease 1s;
-  transition: all 3s ease 1s;
+  -webkit-transition: all 3s ease 1.6s;
+  transition: all 3s ease 1.6s;
 }
 
 .slider__slide.swiper-slide.swiper-slide-active .slider__image img {
@@ -1176,16 +1176,15 @@ button.swiper-pagination-bullet {
 }
 
 .page .swiper-pagination-bullet {
-  background-color: #b67edc;
-  border: 0.0625rem solid rgba(255, 255, 255, 0.5);
+  background-color: #000;
 }
 
 .swiper-button-prev::after {
-  color: #b67edc;
+  color: #000;
 }
 
 .swiper-button-next::after {
-  color: #b67edc;
+  color: #000;
 }
 
 .swiper {
