@@ -1081,9 +1081,6 @@ button.swiper-pagination-bullet {
   transition: all 0.3s ease 0s;
 }
 
-.no-webp .menu-open .header__logo{
-  background-image: url("../img/logo-white.png") !important; }
-
 .social-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1257,6 +1254,9 @@ button.swiper-pagination-bullet {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
+
+  .no-webp .menu-open .header__logo{
+    background-image: url("../img/logo-white.png"); }
 
   .social-header {
     margin-top: 3.75rem;
@@ -1488,4 +1488,7 @@ button.swiper-pagination-bullet {
 
 .webp .header__logo{ background-image: url(../img/logo.webp); }
 
-.webp .menu-open .header__logo{ background-image: url(../img/logo-white.webp) !important; }
+@media (max-width: 47.99875em){
+
+  .webp .menu-open .header__logo{ background-image: url(../img/logo-white.webp); }
+}
