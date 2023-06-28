@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,regular,500,700,900&display=swap);
 
+@import url(https://fonts.googleapis.com/css?family=Pacifico:regular);
+
 @charset "UTF-8";
 
 @font-face {
@@ -219,6 +221,7 @@ h6 {
 }
 
 .header__container {
+  padding: 0.9375rem;
   position: relative;
   z-index: 5;
   display: -webkit-box;
@@ -251,9 +254,15 @@ h6 {
   font-size: 2rem;
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
+  position: relative;
+  z-index: 5;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
 }
 
 .header__logo {
+  position: relative;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,6 +273,44 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   opacity: 1;
+}
+
+.header__logo span {
+  font-family: "Pacifico", cursive;
+}
+
+.menu-open .header__logo span:nth-child(1) {
+  color: #fff;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.no-webp .header__logo span:nth-child(2){
+  background-image: url("../img/logo.png"); }
+
+.header__logo span:nth-child(2) {
+  background-position: center;
+  background-size: cover;
+}
+
+.no-webp .menu-open .header__logo span:nth-child(2){
+  background-image: url("../img/logo-white.png"); }
+
+.menu-open .header__logo span:nth-child(2) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.header__logo span:nth-child(3) {
+  -webkit-transform: translateX(-10%);
+      -ms-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+.menu-open .header__logo span:nth-child(3) {
+  color: #fff;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
 }
 
 .header__social {
@@ -329,19 +376,35 @@ h6 {
   display: none;
 }
 
-@media (min-width: 75em) {
-  .header__logo img {
-    max-width: 9.375rem;
+@media (min-width: 48em) {
+  .header__logo span {
+    font-size: 2.125rem;
   }
 }
 
-@media (max-width: 62em) {
-  .header__logo img {
-    max-width: 4.6875rem;
+@media (min-width: 75em) {
+  .header__logo span:nth-child(2) {
+    width: 9.375rem;
+  }
+
+  .header__logo span:nth-child(2) {
+    height: 8.98625rem;
   }
 }
 
 @media (max-width: 20em) {
+  .header__logo span {
+    font-size: 1.5rem;
+  }
+
+  .header__logo span:nth-child(2) {
+    width: 3.75rem;
+  }
+
+  .header__logo span:nth-child(2) {
+    height: 3.594375rem;
+  }
+
   .menu__link {
     font-size: 1rem;
   }
@@ -357,7 +420,7 @@ h6 {
 
 @media (max-width: 47.99875em) {
   .header {
-    padding-bottom: 1.25rem;
+    height: 6.25rem;
   }
 
   .header__container {
@@ -379,8 +442,17 @@ h6 {
             flex: 1 1 auto;
   }
 
+  .menu-open .header__search {
+    color: #fff;
+  }
+
   .header__logo {
-    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 
   .social-header {
@@ -416,7 +488,7 @@ h6 {
     top: -100%;
     left: 0;
     width: 100%;
-    height: 3.75rem;
+    height: 6.5625rem;
     background-color: rgba(182, 126, 220, 0.9);
     -webkit-transition-duration: 0.6s;
             transition-duration: 0.6s;
@@ -516,16 +588,54 @@ h6 {
   }
 }
 
-@media (min-width: 62em) and (max-width: 75em) {
-@supports (max-width: clamp( 4.6875rem , -17.6682692308rem  +  36.0576923077vw , 9.375rem )) {
-    .header__logo img {
-      max-width: clamp( 4.6875rem , -17.6682692308rem  +  36.0576923077vw , 9.375rem );
+@media (min-width: 20em) and (max-width: 48em) {
+@supports (font-size: clamp( 1.5rem , 1.0535714286rem  +  2.2321428571vw , 2.125rem )) {
+    .header__logo span {
+      font-size: clamp( 1.5rem , 1.0535714286rem  +  2.2321428571vw , 2.125rem );
     }
 }
 
-@supports not (max-width: clamp( 4.6875rem , -17.6682692308rem  +  36.0576923077vw , 9.375rem )) {
-    .header__logo img {
-      max-width: calc(4.6875rem + 4.6875 * (100vw - 62rem) / 13);
+@supports not (font-size: clamp( 1.5rem , 1.0535714286rem  +  2.2321428571vw , 2.125rem )) {
+    .header__logo span {
+      font-size: calc(1.5rem + 0.625 * (100vw - 20rem) / 28);
+    }
+}
+
+@supports (font-size: clamp( 1rem , 0.5535714286rem  +  2.2321428571vw , 1.625rem )) {
+    .menu__link {
+      font-size: clamp( 1rem , 0.5535714286rem  +  2.2321428571vw , 1.625rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.5535714286rem  +  2.2321428571vw , 1.625rem )) {
+    .menu__link {
+      font-size: calc(1rem + 0.625 * (100vw - 20rem) / 28);
+    }
+}
+}
+
+@media (min-width: 20em) and (max-width: 75em) {
+@supports (width: clamp( 3.75rem , 1.7045454545rem  +  10.2272727273vw , 9.375rem )) {
+    .header__logo span:nth-child(2) {
+      width: clamp( 3.75rem , 1.7045454545rem  +  10.2272727273vw , 9.375rem );
+    }
+}
+
+@supports not (width: clamp( 3.75rem , 1.7045454545rem  +  10.2272727273vw , 9.375rem )) {
+    .header__logo span:nth-child(2) {
+      width: calc(3.75rem + 5.625 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (height: clamp( 3.594375rem , 1.6336931818rem  +  9.8034090909vw , 8.98625rem )) {
+    .header__logo span:nth-child(2) {
+      height: clamp( 3.594375rem , 1.6336931818rem  +  9.8034090909vw , 8.98625rem );
+    }
+}
+
+@supports not (height: clamp( 3.594375rem , 1.6336931818rem  +  9.8034090909vw , 8.98625rem )) {
+    .header__logo span:nth-child(2) {
+      height: calc(3.594375rem + 5.391875 * (100vw - 20rem) / 55);
     }
 }
 }
@@ -552,20 +662,6 @@ h6 {
 @supports not (padding-bottom: clamp( 1.875rem , 0.5357142857rem  +  6.6964285714vw , 3.75rem )) {
     .menu__body {
       padding-bottom: calc(1.875rem + 1.875 * (100vw - 20rem) / 28);
-    }
-}
-}
-
-@media (min-width: 20em) and (max-width: 48em) {
-@supports (font-size: clamp( 1rem , 0.5535714286rem  +  2.2321428571vw , 1.625rem )) {
-    .menu__link {
-      font-size: clamp( 1rem , 0.5535714286rem  +  2.2321428571vw , 1.625rem );
-    }
-}
-
-@supports not (font-size: clamp( 1rem , 0.5535714286rem  +  2.2321428571vw , 1.625rem )) {
-    .menu__link {
-      font-size: calc(1rem + 0.625 * (100vw - 20rem) / 28);
     }
 }
 }
@@ -598,3 +694,7 @@ h6 {
 }
 
 .webp .header::after{ background-image: url(../img/01.webp); }
+
+.webp .header__logo span:nth-child(2){ background-image: url(../img/logo.webp); }
+
+.webp .menu-open .header__logo span:nth-child(2){ background-image: url(../img/logo-white.webp); }
