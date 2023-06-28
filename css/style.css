@@ -1082,7 +1082,7 @@ button.swiper-pagination-bullet {
 }
 
 .no-webp .menu-open .header__logo{
-  background-image: url("../img/logo-white.png"); }
+  background-image: url("../img/logo-white.png") !important; }
 
 .social-header {
   display: -webkit-box;
@@ -1488,4 +1488,4 @@ button.swiper-pagination-bullet {
 
 .webp .header__logo{ background-image: url(../img/logo.webp); }
 
-.webp .menu-open .header__logo{ background-image: url(../img/logo-white.webp); }
+.webp .menu-open .header__logo{ background-image: url(../img/logo-white.webp) !important; }
