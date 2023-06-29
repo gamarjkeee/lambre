@@ -2444,7 +2444,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
   }
 }
 
-@media (max-width: 51.875em) {
+@media (max-width: 52.1875em) {
   .footer__container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2626,9 +2626,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
   }
 }
 
-@media (max-width: 27.1875em) {
+@media (max-width: 27.5em) {
   .footer {
-    padding: 1.5625rem 0;
+    padding: 2.5rem 0;
   }
 
   .footer__container {
