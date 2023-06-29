@@ -3778,7 +3778,7 @@
             slidesPerView: 1,
             spaceBetween: 0,
             autoHeight: true,
-            speed: 800,
+            speed: 1200,
             loop: true,
             effect: "fade",
             autoplay: {
@@ -3963,6 +3963,11 @@
     }
     const da = new DynamicAdapt("max");
     da.init();
+    let headerHeight = document.getElementById("header").offsetHeight;
+    console.log(headerHeight);
+    const page = document.getElementById("page");
+    let marginForPage = page.style.marginTop = `${headerHeight + 20}px`;
+    console.log(marginForPage);
     window["FLS"] = false;
     isWebp();
     addTouchClass();
