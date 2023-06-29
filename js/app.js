@@ -3771,7 +3771,7 @@
         });
     }
     function initSliders() {
-        if (document.querySelector(".swiper")) new core(".swiper", {
+        if (document.querySelector(".slider__slider")) new core(".slider__slider", {
             modules: [ Navigation, Pagination, Autoplay ],
             observer: true,
             observeParents: true,
@@ -3789,6 +3789,21 @@
                 el: ".swiper-pagination",
                 clickable: true
             },
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next"
+            },
+            on: {}
+        });
+        if (document.querySelector(".sale__slider")) new core(".sale__slider", {
+            modules: [ Navigation ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 4,
+            spaceBetween: 10,
+            speed: 1200,
+            loop: true,
+            effect: "fade",
             navigation: {
                 prevEl: ".swiper-button-prev",
                 nextEl: ".swiper-button-next"
@@ -3965,7 +3980,7 @@
     da.init();
     let headerHeight = document.getElementById("header").offsetHeight;
     const page = document.getElementById("page");
-    page.style.marginTop = `${headerHeight + 20}px`;
+    page.style.marginTop = `${headerHeight + 10}px`;
     window["FLS"] = false;
     isWebp();
     addTouchClass();
