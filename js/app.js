@@ -3964,10 +3964,8 @@
     const da = new DynamicAdapt("max");
     da.init();
     let headerHeight = document.getElementById("header").offsetHeight;
-    console.log(headerHeight);
     const page = document.getElementById("page");
-    let marginForPage = page.style.marginTop = `${headerHeight + 20}px`;
-    console.log(marginForPage);
+    page.style.marginTop = `${headerHeight + 20}px`;
     window["FLS"] = false;
     isWebp();
     addTouchClass();
