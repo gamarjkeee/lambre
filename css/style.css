@@ -1378,13 +1378,34 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 0.25rem;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  font-weight: 700;
 }
 
 .product-card__price span {
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #525252;
+  position: relative;
+}
+
+.product-card__price span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -0.1875rem;
+  width: 50%;
+  height: 0.125rem;
+  background-color: red;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .product-card__link {
@@ -2809,7 +2830,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
   }
 
   .slider__image {
-    padding-bottom: calc(100vh - 6.875rem);
+    padding-bottom: 31.25rem;
   }
 
   .product-card {

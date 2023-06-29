@@ -3778,11 +3778,11 @@
             slidesPerView: 1,
             spaceBetween: 0,
             autoHeight: true,
-            speed: 1200,
+            speed: 1e3,
             loop: true,
             effect: "fade",
             autoplay: {
-                delay: 4e3,
+                delay: 5e3,
                 disableOnInteraction: false
             },
             pagination: {
@@ -3801,12 +3801,30 @@
             observeParents: true,
             slidesPerView: 4,
             spaceBetween: 10,
-            speed: 1200,
-            loop: true,
+            speed: 800,
             effect: "fade",
             navigation: {
                 prevEl: ".swiper-button-prev",
                 nextEl: ".swiper-button-next"
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    autoHeight: true
+                },
+                426: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                769: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                993: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                }
             },
             on: {}
         });
