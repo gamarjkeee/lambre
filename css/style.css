@@ -974,6 +974,38 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+.tabs__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.tabs__title {
+  width: 100%;
+  border: 2px solid rgba(182, 126, 220, 0.2);
+  background-color: rgb(255, 245, 254);
+  padding: 0.625rem 0.9375rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.3;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.tabs__title._tab-active {
+  border: 2px solid #b67edc;
+  background-color: #ffe8fd;
+}
+
+.tabs__content {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border: 2px solid rgba(182, 126, 220, 0.2);
+  padding: 0.625rem 0.9375rem;
+}
+
 [class*=-ibg] {
   position: relative;
 }
@@ -1370,17 +1402,12 @@ button.swiper-pagination-bullet {
   display: flex;
 }
 
-.page__slider {
-  padding: 3.125rem 0;
-}
-
 .page__sale {
-  padding: 3.125rem 0;
   background-color: #fff;
 }
 
-.page__howtomakeanorder {
-  padding: 3.125rem 0;
+.page__howtobecomeaconsultant {
+  background-color: #fff;
 }
 
 .slider__image {
@@ -1470,6 +1497,7 @@ button.swiper-pagination-bullet {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 500;
+  line-height: 1.3;
 }
 
 .howtomakeanorder__text ul li a {
@@ -1478,6 +1506,71 @@ button.swiper-pagination-bullet {
 }
 
 .howtomakeanorder__text ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #b67edc;
+}
+
+.howtobecomeaconsultant__text p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.howtobecomeaconsultant__text p span {
+  color: red;
+  font-weight: 500;
+}
+
+.howtobecomeaconsultant__text p a {
+  color: #b67edc;
+}
+
+.howtobecomeaconsultant__text p:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.howtobecomeaconsultant__text ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.9375rem;
+}
+
+.howtobecomeaconsultant__text ul:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.howtobecomeaconsultant__text ul li {
+  font-size: 1.125rem;
+  padding-left: 1.125rem;
+  line-height: 1.3;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.howtobecomeaconsultant__text ul li a {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #b67edc;
+  font-weight: 500;
+}
+
+.howtobecomeaconsultant__text ul li::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -2634,6 +2727,12 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 }
 
 @media (min-width: 47.99875em) {
+  .tabs__title {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 16.66%;
+            flex: 1 1 16.66%;
+  }
+
   ._header-scroll.header {
     padding-top: 0rem;
   }
@@ -2714,6 +2813,16 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
   }
 }
 
+@media (min-width: 62em) {
+  .page > section {
+    padding-top: 3.75rem;
+  }
+
+  .page > section {
+    padding-bottom: 3.75rem;
+  }
+}
+
 @media (min-width: 75em) {
   .header__logo {
     width: 20rem;
@@ -2736,6 +2845,14 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
   .menu__link {
     font-size: 1rem;
   }
+
+  .page > section {
+    padding-top: 3.125rem;
+  }
+
+  .page > section {
+    padding-bottom: 3.125rem;
+  }
 }
 
 @media (max-width: 74.99875em) {
@@ -2755,6 +2872,13 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 }
 
 @media (max-width: 47.99875em) {
+  .tabs__navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .header {
     height: 6.25rem;
     background-color: #ffe8fd;
@@ -3046,7 +3170,37 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 }
 }
 
+@media (min-width: 20em) and (max-width: 62em) {
+@supports (padding-top: clamp( 3.125rem , 2.8273809524rem  +  1.4880952381vw , 3.75rem )) {
+    .page > section {
+      padding-top: clamp( 3.125rem , 2.8273809524rem  +  1.4880952381vw , 3.75rem );
+    }
+}
+
+@supports not (padding-top: clamp( 3.125rem , 2.8273809524rem  +  1.4880952381vw , 3.75rem )) {
+    .page > section {
+      padding-top: calc(3.125rem + 0.625 * (100vw - 20rem) / 42);
+    }
+}
+
+@supports (padding-bottom: clamp( 3.125rem , 2.8273809524rem  +  1.4880952381vw , 3.75rem )) {
+    .page > section {
+      padding-bottom: clamp( 3.125rem , 2.8273809524rem  +  1.4880952381vw , 3.75rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 3.125rem , 2.8273809524rem  +  1.4880952381vw , 3.75rem )) {
+    .page > section {
+      padding-bottom: calc(3.125rem + 0.625 * (100vw - 20rem) / 42);
+    }
+}
+}
+
 @media (any-hover: hover) {
+  .tabs__title:hover {
+    background-color: #ffe8fd;
+  }
+
   .header__search:hover {
     color: #757575;
   }
@@ -3136,6 +3290,14 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 
   .howtomakeanorder__text ul li a:hover {
     color: #b67edc;
+  }
+
+  .howtobecomeaconsultant__text p a:hover {
+    text-decoration: underline;
+  }
+
+  .howtobecomeaconsultant__text ul li a:hover {
+    text-decoration: underline;
   }
 }
 
