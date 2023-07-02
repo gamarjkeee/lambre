@@ -1005,34 +1005,6 @@ button.swiper-pagination-bullet {
   transition: all 0.3s ease 0s;
 }
 
-.no-webp .header::after{
-  background-image: url("../img/header-background.jpg"); }
-
-.header::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-position: center 62%;
-  background-size: cover;
-  opacity: 0.4;
-}
-
-.header::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 245, 254, 0)), color-stop(70%, rgba(255, 245, 254, 0)), to(rgb(255, 245, 254)));
-  background: linear-gradient(to bottom, rgba(255, 245, 254, 0) 0%, rgba(255, 245, 254, 0) 70%, rgb(255, 245, 254) 100%);
-}
-
 .header__container {
   padding: 0.9375rem;
   position: relative;
@@ -1238,34 +1210,6 @@ button.swiper-pagination-bullet {
   margin-bottom: 2.5rem;
 }
 
-.no-webp .title::before{
-  background-image: url("../img/header-background.jpg"); }
-
-.title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center 60%;
-  z-index: 1;
-  opacity: 0.4;
-}
-
-.title::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(70%, rgba(255, 255, 255, 0)), to(rgb(255, 255, 255)));
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255) 100%);
-}
-
 .title span {
   position: relative;
   z-index: 1;
@@ -1275,21 +1219,6 @@ button.swiper-pagination-bullet {
   text-transform: uppercase;
   font-size: 1.75rem;
   font-weight: 400;
-}
-
-.title span::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: calc(100% + 7.5rem);
-  height: 12.5rem;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .product-card {
@@ -1535,25 +1464,29 @@ button.swiper-pagination-bullet {
 
 .howtomakeanorder__text ul li {
   font-size: 1.125rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding-left: 1.125rem;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 0.625rem;
-     -moz-column-gap: 0.625rem;
-          column-gap: 0.625rem;
   font-weight: 500;
+}
+
+.howtomakeanorder__text ul li a {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .howtomakeanorder__text ul li::before {
   content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 0.5rem;
   height: 0.5rem;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 0.5rem;
-          flex: 0 0 0.5rem;
   border-radius: 50%;
   background-color: #b67edc;
 }
@@ -2705,9 +2638,79 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
     padding-top: 0rem;
   }
 
+  .no-webp .header::after{
+    background-image: url("../img/header-background.jpg"); }
+
+  .header::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center 62%;
+    background-size: cover;
+    opacity: 0.4;
+  }
+
+  .header::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 245, 254, 0)), color-stop(70%, rgba(255, 245, 254, 0)), to(rgb(255, 245, 254)));
+    background: linear-gradient(to bottom, rgba(255, 245, 254, 0) 0%, rgba(255, 245, 254, 0) 70%, rgb(255, 245, 254) 100%);
+  }
+
   ._header-scroll .header__logo {
     width: 10.625rem;
     height: 4.39125rem;
+  }
+
+  .no-webp .title::before{
+    background-image: url("../img/header-background.jpg"); }
+
+  .title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center 60%;
+    z-index: 1;
+    opacity: 0.4;
+  }
+
+  .title::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(70%, rgba(255, 255, 255, 0)), to(rgb(255, 255, 255)));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255) 100%);
+  }
+
+  .title span::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: calc(100% + 3.75rem);
+    height: 12.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
   }
 }
 
@@ -2754,6 +2757,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 @media (max-width: 47.99875em) {
   .header {
     height: 6.25rem;
+    background-color: #ffe8fd;
   }
 
   .header__container {
@@ -2906,6 +2910,12 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 
   .social-footer__item {
     font-size: 2.75rem;
+  }
+
+  .title {
+    background-color: #ffe8fd;
+    color: #fff;
+    margin: 0 -0.9375rem;
   }
 
   .product-card {
@@ -3123,8 +3133,18 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
   .howtomakeanorder__text p a:hover {
     text-decoration: underline;
   }
+
+  .howtomakeanorder__text ul li a:hover {
+    color: #b67edc;
+  }
 }
 
-.webp .header::after{ background-image: url(../img/header-background.webp); }
+@media (min-width: 47.99875em){
 
-.webp .title::before{ background-image: url(../img/header-background.webp); }
+  .webp .header::after{ background-image: url(../img/header-background.webp); }
+}
+
+@media (min-width: 47.99875em){
+
+  .webp .title::before{ background-image: url(../img/header-background.webp); }
+}
