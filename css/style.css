@@ -1507,7 +1507,7 @@ button.swiper-pagination-bullet {
 
 .howtomakeanorder__text p span {
   color: red;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .howtomakeanorder__text p a {
@@ -1551,6 +1551,9 @@ button.swiper-pagination-bullet {
   content: "";
   width: 0.5rem;
   height: 0.5rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0.5rem;
+          flex: 0 0 0.5rem;
   border-radius: 50%;
   background-color: #b67edc;
 }
